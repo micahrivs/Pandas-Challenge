@@ -22,7 +22,7 @@ These findings raise important questions about the relationship between budget a
 * According to the data analysis, there is a negative correlation between the size of schools and student achievement. Specifically, as the number of students in a school increases, the average math and reading scores, passing rates for math and reading, and overall passing rates decrease. This suggests that schools, districts, and charters should consider reducing student size in order to improve academic achievement.
 
 ## Table of Contents
-* [Import Dependencies and Setup][(https://github.com/micahrivs/Pandas-Challenge.git)](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
+* [Import Dependencies and Setup](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
 * [Load, Read and Merge the Data](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
 * [District Summary](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
 * [School Summary](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
