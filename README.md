@@ -22,18 +22,15 @@ These findings raise important questions about the relationship between budget a
 * According to the data analysis, there is a negative correlation between the size of schools and student achievement. Specifically, as the number of students in a school increases, the average math and reading scores, passing rates for math and reading, and overall passing rates decrease. This suggests that schools, districts, and charters should consider reducing student size in order to improve academic achievement.
 
 ## Table of Contents
-* [Import Dependencies and Setup](https://nbviewer.jupyter.org/github/ermiasgelaye/pandas-challenge/blob/master/PyCitySchools/.ipynb_checkpoints/PyCitySchools_starter-checkpoint.ipynb)
-* [Load, Read and Merge the Data](https://nbviewer.jupyter.org/github/ermiasgelaye/pandas-challenge/blob/master/PyCitySchools/.ipynb_checkpoints/PyCitySchools_starter-checkpoint.ipynb)
-* [District Summary](https://nbviewer.jupyter.org/github/ermiasgelaye/pandas-challenge/blob/master/PyCitySchools/.ipynb_checkpoints/PyCitySchools_starter-checkpoint.ipynb)
-* [School Summary](https://nbviewer.jupyter.org/github/ermiasgelaye/pandas-challenge/blob/master/PyCitySchools/.ipynb_checkpoints/PyCitySchools_starter-checkpoint.ipynb)
-* [Top Performing Schools (By % Overall Passing)](https://nbviewer.jupyter.org/github/ermiasgelaye/pandas-challenge/blob/master/PyCitySchools/.ipynb_checkpoints/PyCitySchools_starter-checkpoint.ipynb)
-* [Bottom Performing Schools (By % Overall Passing)](https://nbviewer.jupyter.org/github/ermiasgelaye/pandas-challenge/blob/master/PyCitySchools/.ipynb_checkpoints/PyCitySchools_starter-checkpoint.ipynb)
-* [Math Scores by Grade](https://nbviewer.jupyter.org/github/ermiasgelaye/pandas-challenge/blob/master/PyCitySchools/.ipynb_checkpoints/PyCitySchools_starter-checkpoint.ipynb)
-* [Reading Scores by Grade](https://nbviewer.jupyter.org/github/ermiasgelaye/pandas-challenge/blob/master/PyCitySchools/.ipynb_checkpoints/PyCitySchools_starter-checkpoint.ipynb)
-* [Scores by School Spending](https://nbviewer.jupyter.org/github/ermiasgelaye/pandas-challenge/blob/master/PyCitySchools/.ipynb_checkpoints/PyCitySchools_starter-checkpoint.ipynb)
-* [Scores by School Size](https://nbviewer.jupyter.org/github/ermiasgelaye/pandas-challenge/blob/master/PyCitySchools/.ipynb_checkpoints/PyCitySchools_starter-checkpoint.ipynb)
-* [Scores by School Type](https://nbviewer.jupyter.org/github/ermiasgelaye/pandas-challenge/blob/master/PyCitySchools/.ipynb_checkpoints/PyCitySchools_starter-checkpoint.ipynb)
-
+* [Import Dependencies and Setup][(https://github.com/micahrivs/Pandas-Challenge.git)](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
+* [Load, Read and Merge the Data](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
+* [District Summary](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
+* [School Summary](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
+* [Top Performing Schools (By % Overall Passing)](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
+* [Math Scores by Grade](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
+* [Reading Scores by Grade](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
+* [Scores by School Spending](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
+* [Scores by School Type](https://github.com/micahrivs/Pandas-Challenge/blob/main/PyCitySchools/PyCitySchools.ipynb)
 
 ### Import Dependencies and Setup
 
@@ -43,9 +40,9 @@ import pandas as pd
 ```
 ### Load, Read and Merge the Data
 ```python
- # File to Load (Remember to Change These)
-school_data_to_load = "Resources/schools_complete.csv"
-student_data_to_load = "Resources/students_complete.csv"
+# File to Load (Remember to Change These)
+school_data_to_load = Path("Resources/schools_complete.csv")
+student_data_to_load = Path("Resources/students_complete.csv")
 
 # Read School and Student Data File and store into Pandas DataFrames
 school_data = pd.read_csv(school_data_to_load)
@@ -57,7 +54,7 @@ school_data_complete.head()
 ```
 ### District Summary
 
-* A high level analysis on the district's created on the following key metrics
+* A detailed examination of the districts formed based on the metrics mentioned below at a higher level.
   * Total Schools
   * Total Students
   * Total Budget
@@ -67,7 +64,7 @@ school_data_complete.head()
   * % Passing Reading (The percentage of students that passed reading.)
   * % Overall Passing (The percentage of students that passed math **and** reading.)
   
-  The district summery table looks as follows: 
+  The table outlining the summary of districts appears in the following manner: 
 <table id="T_1a0abed2_9a44_11e7_bb3a_0c4de9c48691" > 
 <thead>    <tr> 
         <th class="blank level0" ></th> 
@@ -95,7 +92,7 @@ school_data_complete.head()
 
 ### School Summary
 
-* An overview table that summarizes key metrics about each school was created in the following metrics
+* A table providing a summary of essential metrics for each school was generated based on the following criteria.
   * School Name
   * School Type
   * Total Students
@@ -105,10 +102,10 @@ school_data_complete.head()
   * Average Reading Score
   * % Passing Math (The percentage of students that passed math.)
   * % Passing Reading (The percentage of students that passed reading.)
-  * % Overall Passing (The percentage of students that passed math **and** reading.)
+  * % Overall Passing (The percentage of students that passed math and reading.)
  
- The school summery table looks as follows:
- 
+The table outlining the summary of schools appears in the following manner:
+
 <table id="T_8d9d78d2_a90d_11ea_b01d_8863df8cd0c9"><thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">School Type</th>        <th class="col_heading level0 col1">Total Students</th>        <th class="col_heading level0 col2">Total School Budget</th>        <th class="col_heading level0 col3">Per Student Budget</th>        <th class="col_heading level0 col4">Average Math Score</th>        <th class="col_heading level0 col5">Average Reading Score</th>        <th class="col_heading level0 col6">% Passing Math</th>        <th class="col_heading level0 col7">% Passing Reading</th>        <th class="col_heading level0 col8">% Overall Passing</th>    </tr></thead><tbody>
                 <tr>
                         <th id="T_8d9d78d2_a90d_11ea_b01d_8863df8cd0c9level0_row0" class="row_heading level0 row0">Bailey High School</th>
@@ -295,7 +292,7 @@ school_data_complete.head()
 
 ### Top Performing Schools (By % Overall Passing)
 
-* A table that highlights the top 5 performing schools based on % Overall Passing was created and it includes the following metrics.
+* A table featuring the top 5 schools with the highest % Overall Passing rate was generated, and it includes the following metrics.
   * School Name
   * School Type
   * Total Students
@@ -305,9 +302,9 @@ school_data_complete.head()
   * Average Reading Score
   * % Passing Math (The percentage of students that passed math.)
   * % Passing Reading (The percentage of students that passed reading.)
-  * % Overall Passing (The percentage of students that passed math **and** reading.)
+  * % Overall Passing (The percentage of students that passed math and reading.)
   
-A table of Top Performing Schools (By % Overall Passing) looks as follows:
+The table showcasing the Top Performing Schools (By % Overall Passing) appears in the following manner:
 
 <table id="T_8d9ff59e_a90d_11ea_b01d_8863df8cd0c9"><thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">School Type</th>        <th class="col_heading level0 col1">Total Students</th>        <th class="col_heading level0 col2">Total School Budget</th>        <th class="col_heading level0 col3">Per Student Budget</th>        <th class="col_heading level0 col4">Average Math Score</th>        <th class="col_heading level0 col5">Average Reading Score</th>        <th class="col_heading level0 col6">% Passing Math</th>        <th class="col_heading level0 col7">% Passing Reading</th>        <th class="col_heading level0 col8">% Overall Passing</th>    </tr></thead><tbody>
                 <tr>
@@ -375,9 +372,9 @@ A table of Top Performing Schools (By % Overall Passing) looks as follows:
 
 ### Bottom Performing Schools (By % Overall Passing)
 
-* A table that highlights the bottom 5 performing schools based on % Overall Passing was created Include all of the same metrics as above.
+* A table featuring the bottom 5 schools with the lowest % Overall Passing rate was generated, including all of the same metrics as above.
 
-A table of Bottom Performing Schools (By % Overall Passing) looks as follows:
+The table showcasing the Bottom Performing Schools (By % Overall Passing) appears in the following manner:
 
 <table id="T_8da1e836_a90d_11ea_b01d_8863df8cd0c9"><thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">School Type</th>        <th class="col_heading level0 col1">Total Students</th>        <th class="col_heading level0 col2">Total School Budget</th>        <th class="col_heading level0 col3">Per Student Budget</th>        <th class="col_heading level0 col4">Average Math Score</th>        <th class="col_heading level0 col5">Average Reading Score</th>        <th class="col_heading level0 col6">% Passing Math</th>        <th class="col_heading level0 col7">% Passing Reading</th>        <th class="col_heading level0 col8">% Overall Passing</th>    </tr></thead><tbody>
                 <tr>
@@ -445,9 +442,9 @@ A table of Bottom Performing Schools (By % Overall Passing) looks as follows:
 
 ### Math Scores by Grade
 
-* A table that lists the average Math Score for students of each grade level (9th, 10th, 11th, 12th) at each school was created.
+* A table listing the average Math Score of students in each grade level (9th, 10th, 11th, and 12th) for every school was generated.
 
-A table of Math Scores by Grade looks as follows:
+The table showcasing Math Scores by Grade appears in the following manner:
 
 <table id="T_8da8ee10_a90d_11ea_b01d_8863df8cd0c9"><thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">9th</th>        <th class="col_heading level0 col1">10th</th>        <th class="col_heading level0 col2">11th</th>        <th class="col_heading level0 col3">12th</th>    </tr>    <tr>        <th class="index_name level0">School Name</th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>    </tr></thead><tbody>
                 <tr>
@@ -560,9 +557,9 @@ A table of Math Scores by Grade looks as follows:
 
 ### Reading Scores by Grade
 
-* A table that lists the average Reading Score for students of each grade level (9th, 10th, 11th, 12th) at each school was created.
+* A table listing the average Reading Score of students in each grade level (9th, 10th, 11th, and 12th) for every school was generated.
 
-A table of Reading Scores by Grade looks as follows:
+The table of Reading Scores by Grade appears in the following manner:
 
 <table id="T_8daf7eb0_a90d_11ea_b01d_8863df8cd0c9"><thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">9th</th>        <th class="col_heading level0 col1">10th</th>        <th class="col_heading level0 col2">11th</th>        <th class="col_heading level0 col3">12th</th>    </tr>    <tr>        <th class="index_name level0">School Name</th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>    </tr></thead><tbody>
                 <tr>
@@ -675,14 +672,15 @@ A table of Reading Scores by Grade looks as follows:
 
 ### Scores by School Spending
 
-* A table that breaks down school performances based on average Spending Ranges (Per Student), and 4 reasonable bins to group school spending was created.The table includes each of the following:
+* A table breaking down school performances based on average Spending Ranges (Per Student) and grouping schools into four reasonable bins was generated. The table includes each of the following metrics:
+
   * Average Math Score
   * Average Reading Score
-  * % Passing Math (The percentage of students that passed math.)
-  * % Passing Reading (The percentage of students that passed reading.)
-  * % Overall Passing (The percentage of students that passed math **and** reading.)
+  * % Passing Math
+  * % Passing Reading
+  * % Overall Passing
  
- A table of Scores by School Spending looks as follows:
+The table showcasing Scores by School Spending appears in the following manner:
  
 <table id="T_2f442c12_a94a_11ea_ac65_8863df8cd0c9"><thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">Average Math Score</th>        <th class="col_heading level0 col1">Average Reading Score</th>        <th class="col_heading level0 col2">% Passing Math</th>        <th class="col_heading level0 col3">% Passing Reading</th>        <th class="col_heading level0 col4">% Overall Passing</th>    </tr>    <tr>        <th class="index_name level0">Per Student Budget</th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>    </tr></thead><tbody>
                 <tr>
@@ -722,9 +720,9 @@ A table of Reading Scores by Grade looks as follows:
 
 ### Scores by School Size
 
-* The following table created by grouping schools based on a reasonable approximation of school size (Small, Medium, Large).
+* A table created by grouping schools based on a reasonable approximation of school size (Small, Medium, Large) appears in the following manner. 
 
- A table of Scores by School Size looks as follows:
+ The table includes the following metrics:
  
 <table id="T_477df728_a949_11ea_ac65_8863df8cd0c9"><thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">Average Math Score</th>        <th class="col_heading level0 col1">Average Reading Score</th>        <th class="col_heading level0 col2">% Passing Math</th>        <th class="col_heading level0 col3">% Passing Reading</th>        <th class="col_heading level0 col4">% Overall Passing</th>    </tr>    <tr>        <th class="index_name level0">Total Students</th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>    </tr></thead><tbody>
                 <tr>
@@ -755,7 +753,7 @@ A table of Reading Scores by Grade looks as follows:
 
 ### Scores by School Type
 
-*  Finally a solution that group schools based on school type (Charter vs. District) was created.
+*  A solution was created to group schools based on school type (Charter vs. District). The table includes the following metrics:
 
 A table of Scores by School Type looks as follows:
 
