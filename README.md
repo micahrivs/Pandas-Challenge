@@ -1,6 +1,6 @@
 # Pandas-Challenge
  ## "While data can reveal valuable insights, having the right tool, such as the Pandas library, can help you effectively analyze and interpret that data."
- # Background
+## Background
  ## This repository presents a Python Pandas solution for analyzing school district data in the education sector of a city. The goal of this project is to aid the school board and mayor in making informed decisions about future school budgets and priorities. To accomplish this, two datasets in CSV format were utilized: schools_complete.csv and students_complete.csv. The former contains information such as Student ID, school name, type, size, and budget, while the latter includes columns for Student ID, student name, gender, grade, school name, reading score, and math score. These datasets were imported, merged, and analyzed using Python Pandas dataframes to display the aggregate data. The project was conducted in a Jupyter notebook, and a link to the analysis report is provided through the Jupyter Notebook Viewer.
  # Observable Trends
 * The dataset used in this analysis includes data from 15 schools, with a total of 39,170 students. The average reading score for all students is 81.87, which is higher than the average math score of 78.98. In terms of passing rates, the percentage of students who passed the reading test (85.80%) is higher than the percentage who passed the math test (74.98%). The overall passing rate, which considers both subjects, is 65.17%. These results suggest that students tend to perform better in reading than in math.
